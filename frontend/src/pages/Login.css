@@ -1,0 +1,49 @@
+.Login { 
+  text-align: center;
+}
+
+.login-header {
+  background-image: url(https://images.unsplash.com/photo-1592150621744-aca64f48394a?q=80&w=1191&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 500px;
+  
+  min-height: 100vh; /* não tirar*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.nav {
+  background-color: azure;
+  width: 100%;
+  height: 100px;
+}
+
+h1 {
+  margin-top: 200px;
+  font-size: 100px;
+}
+
+
+.links {
+  display: flex;
+  gap: 100px;
+  justify-content: right;
+  padding: 30px;
+  padding-right: 100px;
+}
+.links a {
+  text-decoration: none;
+  color: rgb(165, 214, 165);
+  font-weight: 500;
+}
+.links a:hover {
+  color: green;
+  transition: 0.3s;
+}

@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import '../pages/Login.css';
 import Navbar from '../components/Navbar.jsx';
 import Button from '../components/Button.jsx';
 
