@@ -3,7 +3,7 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 import './App.css';
 import Login from './pages/Login.jsx';
 import Home from './pages/Home.jsx';
-import Cadastrar from './pages/CadastrarPlantas.jsx';
+import RegisterPlants from "./pages/RegisterPlants.jsx";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Login/>}/>
         <Route path="/home" element={<Home />} />
-        <Route path="/cadastrar" element={<Cadastrar />} />
+        <Route path="/RegisterPlants" element={<RegisterPlants />} />
       </Routes>
     </BrowserRouter>
   );

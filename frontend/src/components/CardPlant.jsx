@@ -16,9 +16,10 @@ function CardPlant() {
     };
 
     return (
+
         <div style={pageCenter}>
             <div style={cardStyle}>
-                <h1>texto</h1>
+                <h1></h1>
             </div>
         </div>
     );

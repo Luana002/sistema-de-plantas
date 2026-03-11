@@ -1,0 +1,32 @@
+Documentação_Uso de JSON Server no Projeto de Cadastro de Plantas =
+
+Geral: Armazenar Plantas cadastradas, 
+fornecer dados, 
+permitir criação, edição e exclusão de plantas.
+
+Objetivo - CRUD :
+Create - Cadastrar plantas.
+Read - Listar plantas na Home.
+Update - Editar plantas.
+Delete - Remover plantas.
+
+db.JSON
+
+Informações das plantas:
+nome da planta,
+tipo de iluminação,
+tipo (ornamental, medicinal, suculenta, árvore, etc.),
+frequencia de rega,
+descrição,
+foto da planta.
+
+Estados que estou pensando em utilizar no react - useState:
+Criar estados para armazenar os valores digitados,
+Controlar os inputs do formulário,
+Limpar os campos após salvar.
+
+Sobre as paginas(pages):
+Home.jsx - Botão de editar,
+Botão de excluir,
+Barra de pesquisa,
+Filtro por tipo.
