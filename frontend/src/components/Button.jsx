@@ -1,26 +1,30 @@
 import {useState} from 'react';
 
-function Button({ onClick, children = 'Entrar' }) {
+function Button({ onClick, children = 'Entrar', color = '#4CAF50', hoverColor = '#388E3C', width, margin, style  }) {
     const [hover, setHover] = useState(false);
 
     const defaultStyles = {
-        width: "300px",
         height: "50px",
         borderRadius: "50px",
         border: "none",
         color: 'white',
-        backgroundColor: hover ? '#388E3C' : '#4CAF50',
-        transition: '0.2',
+        backgroundColor: hover ? hoverColor : color,
+        transition: '0.3s',
         fontSize: "20px",
-        marginTop: "100px",
-        cursor: "pointer"
+        cursor: "pointer",
+        
+         width: width || "400px",
+         marginTop: margin || "0px",
+
+         ...style
     };
 
   return (
-    <button style={defaultStyles} 
-    onClick={onClick}
-    onMouseEnter={()=> setHover(true)}
-    onMouseLeave={()=> setHover(false)}
+    <button 
+      style={defaultStyles} 
+      onClick={onClick}
+      onMouseEnter={()=> setHover(true)}
+      onMouseLeave={()=> setHover(false)}
     >
       {children}
     </button>

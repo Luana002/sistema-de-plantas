@@ -1,17 +1,18 @@
+import Btn from '../components/Button';
+
 function RegisterPlants() {
   const pageStyle = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     minHeight: "100vh",
-    backgroundColor: "#f0f0f0"
+    backgroundColor: "#ffffff"
   };
   const styleContainer = {
     display: "flex",
     flexDirection: "column",
     backgroundColor: "#a45757",
-    widht: "100%",
-    maxWidth: "800px",
+    widht: "600px",
     padding: "25px",
     gap: "12px",
     borderRadius: "15px",
@@ -19,8 +20,8 @@ function RegisterPlants() {
     color: "white"
   };
   const allInput = {
-    height: "30px",
-    widht: "100%",
+    height: "30px", // altura
+    width: "600px",
     borderRadius: "5px",
     border: "none",
     padding: "0 5px",
@@ -29,9 +30,10 @@ function RegisterPlants() {
 
   return (
     <>
-    <h1>Nova Planta</h1>
-
     <div style={pageStyle}>
+      <h1 style={{}}>
+        Cadastro
+      </h1>
       <div style={styleContainer}>
 
         <hr />
@@ -54,7 +56,16 @@ function RegisterPlants() {
         </select>
 
         <label>Descrição (opcional)</label>
-        <input type="text" style={allInput}/>
+        <textarea style={{...allInput, height: "200px", paddingTop: "5px", resize: "none"}}
+        placeholder="Conte mais sobre essa planta..."
+        />
+
+        <Btn
+          color= "#2b2b2b"
+          hoverColor='#000'
+          style={{marginTop:'20px', height: '40px'}}
+        >
+          Cadastrar sua planta</Btn>
 
       </div>
     </div>
