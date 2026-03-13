@@ -1,0 +1,13 @@
+{
+  "plants": [
+    {
+      "id": "5a66",
+      "name": "Espada-de-são-jorge",
+      "light": "Meia-sombra",
+      "type": "Ornamental",
+      "watering": "Apenas quando o solo estiver seco",
+      "description": "Boa para ficar em quartos que não tem muita luz solar."
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
