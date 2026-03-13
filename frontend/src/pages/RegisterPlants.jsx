@@ -1,3 +1,4 @@
+import {useState} from 'react';
 import Btn from '../components/Button';
 
 function RegisterPlants() {
@@ -9,19 +10,20 @@ function RegisterPlants() {
     backgroundColor: "#ffffff"
   };
   const styleContainer = {
-    display: "flex",
+    display:"flex",
     flexDirection: "column",
-    backgroundColor: "#a45757",
-    widht: "600px",
+    //alignItems: "center",
+    backgroundColor: "#5f8d5a",
+    width: "500px",
     padding: "25px",
     gap: "12px",
     borderRadius: "15px",
     boxShadow: "0px 4px 10px rgba(0,0,0,0.2)",
-    color: "white"
+    color: "white",
   };
   const allInput = {
     height: "30px", // altura
-    width: "600px",
+    width: "100%",
     borderRadius: "5px",
     border: "none",
     padding: "0 5px",
@@ -31,19 +33,20 @@ function RegisterPlants() {
   return (
     <>
     <div style={pageStyle}>
-      <h1 style={{}}>
+      <h1 style={{marginTop:"50px"}}>
         Cadastro
       </h1>
       <div style={styleContainer}>
 
-        <hr />
+        {/*<hr />*/}
 
-          <label>Nome da planta</label>
-          <input type="text" style={allInput}/>
+        <label style={{alignSelf: "flex-start"}}>Nome da planta</label>
+        <input type="text" style={allInput}/>
 
         <label>Tipo de iluminação</label>
         <select name="Iluminação" id="" style={allInput}>
           <option>Sol</option>
+          <option>Meia-sombra</option>
           <option>Sombra</option>
         </select>
 
@@ -52,7 +55,21 @@ function RegisterPlants() {
           <option>Ornamental</option>
           <option>Medicinal</option>
           <option>Suculenta</option>
+          <option>Cacto</option>
           <option>Árvore</option>
+          <option>Arbusto</option>
+          <option>Hortaliça</option>
+          <option>Frutífera</option>
+          <option>PANC(Planta Alimentícia Não Convencional)</option>
+        </select>
+
+        <label htmlFor="">Frequência de Rega</label>
+        <select name="" id="" style={allInput}>
+          <option value="">Diária</option>
+          <option value="">Frequente (2 a 3 vezes por semana)</option>
+          <option value="">Moderada (1 vez por semana)</option>
+          <option value="">Rara (A cada 15 dias ou menos)</option>
+          <option value="">Apenas quando o solo estiver seco</option>
         </select>
 
         <label>Descrição (opcional)</label>
@@ -61,9 +78,18 @@ function RegisterPlants() {
         />
 
         <Btn
-          color= "#2b2b2b"
-          hoverColor='#000'
-          style={{marginTop:'20px', height: '40px'}}
+          color= "#0a3407"
+          hoverColor='#c4932b'
+          style={{
+            alignSelf:"center",
+            marginTop:'20px', 
+            height: '40px', 
+            width:"250px",
+            display:"flex",
+            alignItems:"center",
+            justifyContent:"center",
+            textAlign:"center"
+          }}
         >
           Cadastrar sua planta</Btn>
 
