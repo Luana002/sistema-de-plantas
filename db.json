@@ -1,12 +1,28 @@
 {
   "plants": [
     {
-      "id": "5a66",
-      "name": "Espada-de-são-jorge",
+      "id": "0",
+      "name": "copo de leite",
+      "light": "Sol",
+      "type": "Ornamental",
+      "watering": "Rara (A cada 15 dias ou menos)",
+      "description": "planta muito bonita"
+    },
+    {
+      "id": "1",
+      "name": "Rosa",
+      "light": "Sol",
+      "type": "Ornamental",
+      "watering": "Diária",
+      "description": "Rosas vermelhas"
+    },
+    {
+      "id": "2",
+      "name": "Espada de são jorge",
       "light": "Meia-sombra",
       "type": "Ornamental",
       "watering": "Apenas quando o solo estiver seco",
-      "description": "Boa para ficar em quartos que não tem muita luz solar."
+      "description": "Bom para proteção"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

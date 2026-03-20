@@ -1,15 +1,21 @@
 import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import CardPlant from '../components/CardPlant.jsx';
 import RegisterPlants from './RegisterPlants.jsx';
 import Button from '../components/Button.jsx';
 import Navbar from '../components/Navbar.jsx';
+import useGetPlants from '../hooks/useGetPlants';
+
+const API_URL = "http://localhost:3001/plants";
 
 function Home() {
     const navigate = useNavigate();
-
+    const { plants, loading, error } = useGetPlants();
+    
     function register() {
         navigate("/RegisterPlants");
     }
+
 	return(
         <>
        <Navbar/>
@@ -57,6 +63,22 @@ function Home() {
             </div>
         </div>
         
+        <ul style={{marginTop: '30px', listStyle: 'none'}}>
+            {Array.isArray(plants) && plants.length > 0 ? (
+                plants.map((plant, index) => (
+                    <li key={plant.id || index}>
+                        <strong>Nome:</strong> {plant.name} |
+                        <strong>Tipo:</strong> {plant.type} |
+                        <strong>Tipo de iluminação:</strong> {plant.light} |
+                        <strong>frequencia de rega:</strong> {plant.watering} |
+                        <strong> Descrição:</strong> {plant.description || "Sem descrição"}
+                    </li>
+                ))
+            ) : (
+                !loading && <p style={{textAlign:'center'}}>Nenhuma planta encontrada.</p>
+            )}
+        </ul>
+
         <CardPlant/>
         </>
     );

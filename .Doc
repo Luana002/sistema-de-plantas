@@ -1,3 +1,7 @@
+Comandos para rodar: 
+npm run dev
+npx json-server db.json --port 3001
+
 Documentação_Uso de JSON Server no Projeto de Cadastro de Plantas =
 
 Geral: Armazenar Plantas cadastradas, 

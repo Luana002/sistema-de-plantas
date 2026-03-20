@@ -22,3 +22,14 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Ignorar a pasta ou arquivo específico .Doc
+.Doc/
+.Doc
+
+# Ignorar extensões de documentos (opcional, se quiser manter)
+*.doc
+*.docx
+
+# Ignorar o arquivo de banco de dados local
+*db.json
