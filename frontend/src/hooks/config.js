@@ -1,3 +1,5 @@
+//Descobrir onde a API está rodando
+//Para o github codespace
 export const getApiBaseUrl = () => {
   const envApiUrl = import.meta.env.VITE_API_URL;
   if (envApiUrl) return envApiUrl.replace(/\/$/, "");
@@ -5,6 +7,7 @@ export const getApiBaseUrl = () => {
   const { protocol, hostname } = window.location;
 
   if (hostname.endsWith(".app.github.dev")) {
+    //Trocar o sufixo da porta atual pelo sufixo da porta da API
     const host3001 = hostname.replace(/-\d+\.app\.github\.dev$/, "-3001.app.github.dev");
     return `${protocol}//${host3001}`;
   }

@@ -6,7 +6,8 @@ function useRegisterPlants() {
   const [light, setLight] = useState("Sol");
   const [watering, setWatering] = useState("Diária");
   const [description, setDescription] = useState("");
-//CREATE
+
+//CREATE - Executada ao clicar no botão de salvar
   const handleRegister = async () => {
     const apiBaseUrl = getApiBaseUrl();
 
@@ -14,11 +15,11 @@ function useRegisterPlants() {
       const getRes = await fetch(`${apiBaseUrl}/plants`);
       const plants = await getRes.json();
 
-      const nextId = plants.length > 0 //verificar se a lista esta vazia ou não
+      const nextId = plants.length > 0 
       ? Math.max(...plants.map(p => Number(p.id))) + 1
       : 0;
 
-    const plantData = {
+    const plantData = { //objeto enviados para db.json
       id: String(nextId),
       name,
       light,
@@ -26,7 +27,7 @@ function useRegisterPlants() {
       watering,
       description
     };
-    
+      //Requisição POST
       const response = await fetch(`${apiBaseUrl}/plants`, {
       method: "POST",
       headers: {

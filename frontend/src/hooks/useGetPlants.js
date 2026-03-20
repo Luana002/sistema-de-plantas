@@ -1,12 +1,14 @@
 import { useEffect, useState } from 'react';
 import { getApiBaseUrl } from '../hooks/config'; 
+//READ - lista aparecer no Home
 function useGetPlants() {
   const [plants, setPlants] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const apiBaseUrl = getApiBaseUrl();
+    const apiBaseUrl = getApiBaseUrl(); //do config
+
     fetch(`${apiBaseUrl}/plants`) 
       .then((res) => res.json())
       .then((data) => {
@@ -22,3 +24,5 @@ function useGetPlants() {
 
   return { plants, loading, error };
 }
+
+export default useGetPlants;
