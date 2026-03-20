@@ -15,7 +15,9 @@ function Login() {
             <header className="login-header">
                 <Navbar/>
                 <h1>Adicione sua planta aqui!</h1>
-                <Button onClick={entrar}>Entrar</Button>
+                <Button 
+                style={{marginTop: '100px'}}
+                onClick={entrar}>Entrar</Button>
             </header>
         </div>
     );

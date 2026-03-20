@@ -1,0 +1,29 @@
+#styleText {
+    display: flex;
+    background-color: #9dcfa0;
+    height: 50px;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 16px;
+    font-weight: normal; 
+    font-family: Balsamiq Sans, sans-serif;
+}
+
+#styleDiv {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    height: 60px;
+}
+
+#twoText {
+    margin: 0;
+    font-family: Calistoga, serif;
+}
+
+#divBtn {
+     position: absolute;
+    right: 100px;
+}

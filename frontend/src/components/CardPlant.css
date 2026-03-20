@@ -1,0 +1,25 @@
+#styleUl {
+    display:flex;
+    margin: 10px;
+    list-style: none;
+    margin-top: 100px;
+}
+
+#styleLi {
+    background-color: rgb(233, 253, 239);
+    width: 400px;
+    height: 200px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    font-family: Balsamiq Sans, sans-serif;
+}
+
+#styleLi p {
+    margin: 5px 0; 
+}
+
+strong {
+    margin: 10px 10px;
+}
